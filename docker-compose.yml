@@ -1,0 +1,24 @@
+services:
+  backend:
+    image: weskeiser/moviecorp:latest
+    build:
+      context: .
+    container_name: moviecorp
+    depends_on:
+      - postgres
+    environment:
+      - spring.datasource.url=jdbc:postgresql://postgres:5432/moviesdb
+      - spring.datasource.username=postgres
+      - spring.datasource.password=postgres
+    expose:
+      - 8080
+    ports:
+      - "8080:8080"
+
+  postgres:
+    image: 'postgres:latest'
+    container_name: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=moviesdb
