@@ -20,9 +20,7 @@ jobs:
         ports:
           - "5432:5432"
       env:
-        - POSTGRES_USER=postgres
         - POSTGRES_PASSWORD=postgres
-        - POSTGRES_DB=moviesdb
 
     steps:
           # Downloads a copy of the code in your repository before running CI tests
