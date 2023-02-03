@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "ff0b6604-d7f1-4152-942c-c953783d2955",
+		"name": "Franchises",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Franchise 1: add movies",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[1]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/franchises/1/movies",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"franchises",
+						"1",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Franchise 2: add movies",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[1,4]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/franchises/2/movies",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"franchises",
+						"2",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Franchise 1: get all chars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/franchises/1/characters",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"franchises",
+						"1",
+						"characters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Franchise 1: get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/franchises/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"franchises",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Franchise 1: update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"franchiseId\": 1,\n    \"name\": \"Disney Wars\",\n    \"description\": \"A science fiction universe involving space travel, jedi, evil forces and a rebellion seeking the restoration of freedom.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/franchises/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"franchises",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create franchise",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Harry Potter\",\n    \"description\": \"Wizard stuff.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/franchises",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"franchises"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Franchise 1: get movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/franchises/1/movies",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"franchises",
+						"1",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All franchises",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/franchises",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"franchises"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Franchise 1: remove movies",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/franchises/1/movies",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"franchises",
+						"1",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Franchise 3: delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/franchises/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"franchises",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "4a6dd4d4-3f09-4d42-a9f1-3b51c2e92aee",
+		"name": "Characters",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Character 1: get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/characters/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"characters",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create character",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fullName\": \"Clark Kent\",\n    \"alias\": \"Superman\",\n    \"gender\": \"male\",\n    \"pictureUrl\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/characters",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"characters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Character 2: delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/characters/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"characters",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Character 1: get movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/characters/1/movies",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"characters",
+						"1",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All characters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/characters",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"characters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Character 1: update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fullName\": \"Babu Freak\",\n    \"alias\": \"Frik\",\n    \"gender\": \"male\",\n    \"pictureUrl\": \"https://static.wikia.nocookie.net/starwars/images/b/b8/Babu_Frik.jpg/revision/latest/scale-to-width-down/1000?cb=20200110054422\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/characters/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"characters",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
