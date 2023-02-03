@@ -24,6 +24,8 @@ jobs:
           POSTGRES_USER: postgres
           POSTGRES_DB: moviesdb
 
+      maven:
+        image: maven:3-openjdk-18
 
     steps:
           # Downloads a copy of the code in your repository before running CI tests
