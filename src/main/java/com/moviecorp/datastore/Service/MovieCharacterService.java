@@ -52,18 +52,14 @@ public class MovieCharacterService {
 
     var characterSet = new HashSet<MovieCharacter>(characterRepo.findAllById(ids));
 
-    var characters = convert(characterSet, MovieCharacters.class);
-
-    return convert(characters, MovieCharactersDTO.class);
+    return convert(characterSet, MovieCharactersDTO.class);
   }
 
   public MovieCharactersDTO getAll() {
 
-    var charactersSet = new HashSet<MovieCharacter>(characterRepo.findAll());
+    var characterSet = new HashSet<MovieCharacter>(characterRepo.findAll());
 
-    var characters = convert(charactersSet, MovieCharacters.class);
-
-    return convert(characters, MovieCharactersDTO.class);
+    return convert(characterSet, MovieCharactersDTO.class);
   }
 
   public void validateCharacterExists(Long characterId) {
@@ -78,9 +74,9 @@ public class MovieCharacterService {
 
     var character = findById(characterId);
 
-    var movieSet = new HashSet<Movie>(character.getMovies());
+    var movies = new HashSet<Movie>(character.getMovies());
 
-    return convert(movieSet, MoviesDTO.class);
+    return convert(movies, MoviesDTO.class);
   }
 
   // --------------
