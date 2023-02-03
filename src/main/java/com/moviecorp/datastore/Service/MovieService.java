@@ -122,37 +122,38 @@ public class MovieService {
 
     var movie = findById(movieId);
 
-    var movieCharacterSet = movie.getMovieCharacters();
+    var charSetInMovie = movie.getMovieCharacters();
 
-    return convert(movieCharacterSet, MovieCharactersDTO.class);
+    return convert(charSetInMovie, MovieCharactersDTO.class);
   }
 
+  // BUG: Can't add existing
   public MovieCharactersDTO addCharacters(MovieCharactersDTO newMovieCharactersDTO, Long movieId) {
 
     var movie = findById(movieId);
 
-    var newMovieCharacters = convert(newMovieCharactersDTO, MovieCharacters.class);
+    MovieCharacters newMovieCharacters = convert(newMovieCharactersDTO, MovieCharacters.class);
 
-    var movieCharacterSet = movie.getMovieCharacters();
+    var charSetInMovie = movie.getMovieCharacters();
 
-    movieCharacterSet.addAll(newMovieCharacters.getMovieCharacters());
+    charSetInMovie.addAll(newMovieCharacters.getMovieCharacters());
 
-    movie.setMovieCharacters(movieCharacterSet);
+    movie.setMovieCharacters(charSetInMovie);
 
     movieRepo.save(movie);
 
-    return convert(movieCharacterSet, MovieCharactersDTO.class);
+    return convert(charSetInMovie, MovieCharactersDTO.class);
   }
 
   public void removeCharacters(List<Long> charsToRemove, Long movieId) {
 
     var movie = findById(movieId);
 
-    var charsInDB = movie.getMovieCharacters();
+    var charSetInMovie = movie.getMovieCharacters();
 
-    charsInDB.removeIf(character -> charsToRemove.contains(character.getCharacterId()));
+    charSetInMovie.removeIf(c -> charsToRemove.contains(c.getCharacterId()));
 
-    movie.setMovieCharacters(charsInDB);
+    movie.setMovieCharacters(charSetInMovie);
 
     movieRepo.save(movie);
   }
