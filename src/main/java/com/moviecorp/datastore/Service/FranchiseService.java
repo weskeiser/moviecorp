@@ -1,12 +1,14 @@
 package com.moviecorp.datastore.Service;
 
 import com.moviecorp.datastore.Entity.Franchise;
+import com.moviecorp.datastore.Entity.Movie;
 import com.moviecorp.datastore.Exception.FranchiseException.FranchiseNotFoundException;
 import com.moviecorp.datastore.Model.Franchise.*;
 import com.moviecorp.datastore.Model.Movie.MovieIds;
 import com.moviecorp.datastore.Model.MovieCharacter.MovieCharacterIds;
 import com.moviecorp.datastore.Repository.FranchiseRepo;
 import java.util.HashSet;
+import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.lang.Nullable;
@@ -78,9 +80,9 @@ public class FranchiseService {
 
     var franchise = findById(franchiseId);
 
-    var movieIds = franchise.getMovies();
+    Set<Movie> movies = franchise.getMovies();
 
-    return convert(movieIds, MovieIds.class);
+    return convert(movies, MovieIds.class);
   }
 
   // -------------- Helpers
