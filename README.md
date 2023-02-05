@@ -5,10 +5,9 @@
 A dockerized PostgreSQL database solution using Spring Boot with Hibernate and
 Maven. The database stores information about movies, characters and franchises.
 
-Mapstruct is utilized for mapping conversions among entities and models to the
+Mapstruct is utilized for mapping conversions among entities and models and
+binding them to the
 built in Spring converter.
-
----
 
 ## Structure
 
