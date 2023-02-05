@@ -32,7 +32,7 @@ jobs:
 
     services:
       maven:
-        maven:3-openjdk-18
+        image: maven:3-openjdk-18
 
       postgres:
         image: postgres:latest
@@ -45,14 +45,10 @@ jobs:
 
 
     steps:
+
       # Downloads a copy of the code in your repository before running CI tests
-
-
-      - name: Check out repository code
-        uses: actions/checkout@v3
-
-      - name: Build Dockerfile
-        run: docker build -t weskeiser/moviecorp:latest .
+      # - name: Check out repository code
+      - uses: actions/checkout@v3
 
       - name: Build the docker-compose stack
         run: docker-compose up
