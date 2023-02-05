@@ -58,7 +58,7 @@ jobs:
       #   run: mvn -B package --file pom.xml
 
       - name: Install dependencies
-        run: mvn --batch-mode --update-snapshots package
+        run: /opt/maven/bin/mvn --batch-mode --update-snapshots package
 
       # - name: Connect to PostgreSQL
       #   # Runs a script that creates a PostgreSQL table, populates
@@ -70,7 +70,6 @@ jobs:
       #     POSTGRES_HOST: postgres
       #     # The default PostgreSQL port
       #     POSTGRES_PORT: 5432
-
 
 
 
