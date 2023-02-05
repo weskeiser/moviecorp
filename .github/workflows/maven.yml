@@ -44,7 +44,6 @@ jobs:
           POSTGRES_DB: moviesdb
 
       dockerfile:
-        using: 'docker'
         image: 'Dockerfile'
 
     steps:
