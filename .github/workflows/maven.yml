@@ -49,7 +49,7 @@ jobs:
 
       # Downloads a copy of the code in your repository before running CI tests
       - name: Check out repository code
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
 
       # - name: Build the docker-compose stack
       #   run: docker-compose up
