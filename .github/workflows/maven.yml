@@ -51,7 +51,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
 
-        name: Build Dockerfile
+      - name: Build Dockerfile
         run: docker build -t weskeiser/moviecorp:latest .
 
       - name: Build the docker-compose stack
