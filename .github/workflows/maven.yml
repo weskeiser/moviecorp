@@ -53,8 +53,8 @@ jobs:
       - name: Build the docker-compose stack
         run: docker-compose up -d
 
-      - name: Install dependencies
-        run: mvn --batch-mode --update-snapshots package
+      # - name: Install dependencies
+      #   run: mvn --batch-mode --update-snapshots package
 
 
       # - name: Connect to PostgreSQL
