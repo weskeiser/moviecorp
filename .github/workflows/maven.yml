@@ -31,9 +31,12 @@ jobs:
     container:
       image: openjdk:18
 
+    container:
+      image: maven:3-openjdk-18
+
     services:
-      maven:
-        image: maven:3-openjdk-18
+      # maven:
+      #   image: maven:3-openjdk-18
 
       postgres:
         image: postgres:latest
@@ -48,16 +51,14 @@ jobs:
     steps:
 
       # Downloads a copy of the code in your repository before running CI tests
-      # - name: Check out repository code
+      - name: Check out repository code
       - uses: actions/checkout@v3
-
-      - uses: docker
 
       - name: Build the docker-compose stack
         run: docker-compose up
 
-      # - name: Install dependencies
-      #   run: mvn --batch-mode --update-snapshots package
+      - name: Install dependencies
+        run: mvn --batch-mode --update-snapshots package
 
 
       # - name: Connect to PostgreSQL
