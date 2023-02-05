@@ -59,14 +59,11 @@ jobs:
       #   run: mvn -B package --file pom.xml
 
 
-      - name: Install dependencies
-        run: mvn --batch-mode --update-snapshots package
+      # - name: Install dependencies
+      #   run: mvn --batch-mode --update-snapshots package
 
       - name: Install dependencies 2
         run: maven --batch-mode --update-snapshots package
-
-      - name: Install dependencies 3
-        run: /usr/bin/maven/mvn --batch-mode --update-snapshots package
 
       # - name: Connect to PostgreSQL
       #   # Runs a script that creates a PostgreSQL table, populates
