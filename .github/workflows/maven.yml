@@ -58,8 +58,6 @@ jobs:
       # - name: Build with Maven
       #   run: mvn -B package --file pom.xml
 
-      - name: Permission test
-        run: chown -R 1000:1000 /moviecorp
 
       - name: Install dependencies
         run: mvn --batch-mode --update-snapshots package
