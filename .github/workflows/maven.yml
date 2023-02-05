@@ -28,7 +28,8 @@ jobs:
 
   container-job:
     runs-on: ubuntu-latest
-    container: openjdk:18
+    container:
+      image: openjdk:18
 
     services:
       maven:
@@ -49,6 +50,8 @@ jobs:
       # Downloads a copy of the code in your repository before running CI tests
       # - name: Check out repository code
       - uses: actions/checkout@v3
+
+      - uses: docker
 
       - name: Build the docker-compose stack
         run: docker-compose up
